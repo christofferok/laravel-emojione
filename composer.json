@@ -1,0 +1,54 @@
+{
+    "name": "christofferok/laravel-emojione",
+    "type": "library",
+    "description": "Laravel helper for EmojiOne",
+    "keywords": [
+        "ChristofferOK",
+        "LaravelEmojiOne",
+        "laravel",
+        "emoji",
+        "emojione"
+    ],
+    "homepage": "https://github.com/christofferok/LaravelEmojiOne",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":Christoffer Korvald",
+            "email": "korvald@gmail.com",
+            "homepage": "https://christoffeork.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "emojione/emojione": "^2.2",
+        "illuminate/support": "~5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChristofferOK\\LaravelEmojiOne\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChristofferOK\\LaravelEmojiOne\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
