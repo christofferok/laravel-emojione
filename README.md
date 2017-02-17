@@ -7,6 +7,7 @@
 
 Laravel package to make it easier working with the gorgeous emojis from [EmojiOne](http://emojione.com/). 
 
+Remember to read the [EmojiOne license](http://emojione.com/licensing/) and provide the appropriate attribution.
 
 ## Install
 
@@ -81,7 +82,7 @@ If using the PNG sprites you also have to use the following stylesheet:
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Remember to read the [EmojiOne license](http://emojione.com/licensing/) and provide the appropriate attribution.
 
 [ico-version]: https://img.shields.io/packagist/v/christofferok/laravel-emojione.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
