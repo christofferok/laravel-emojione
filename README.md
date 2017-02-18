@@ -4,6 +4,11 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Software License][ico-license]](LICENSE.md)
 
+<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7">
+<img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f3cb-1f3fc.svg?v=2.2.7">
+<img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
+<img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/262e.svg?v=2.2.7">
+
 
 Laravel package to make it easier working with the gorgeous emojis from [EmojiOne](http://emojione.com/). 
 
@@ -47,10 +52,10 @@ LaravelEmojiOne::toImage($str); // - native unicode + shortnames -> images (mixe
 
 Blade (equivalent to `LaravelEmojiOne::toImage($str)`): 
 
-```
-@emojione(':smile:') // -> 😄
-@emojione(':smile: ❤️') // -> 😄❤️
-```
+`@emojione(':smile:')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7">
+
+`@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
+
 
 ### Styling
 `<link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.7/assets/css/emojione.min.css"/>`
