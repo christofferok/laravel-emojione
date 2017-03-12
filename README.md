@@ -79,7 +79,7 @@ $ php artisan vendor:publish --tag=public --provider="ChristofferOK\LaravelEmoji
 If you want to use sprites:
 
 ``` bash
-$ php artisan vendor:publish --tag=public --provider="ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider"
+$ php artisan vendor:publish --tag=sprites --provider="ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider"
 ```
 If using the PNG sprites you also have to use the following stylesheet:
 `<link rel="stylesheet" href="/vendor/emojione/sprites/emojione.sprites.css"/>`
