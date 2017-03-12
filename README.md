@@ -63,6 +63,24 @@ Blade (equivalent to `LaravelEmojiOne::toImage($str)`):
 or if you are serving your own CSS:
 `<link rel="stylesheet" href="/vendor/emojione/css/emojione.min.css"/>`
 
+### Example
+You want to let users put emoji a comment. 
+When you are saving a comment, you might want to run the content through `LaravelEmojiOne::toShort($str)` to convert `😄` and other emoji to `:smile:` etc. 
+
+```php
+Comment::create([
+  'content' => LaravelEmojiOne::toShort(request('content'))
+]);
+```
+So if someone leaves a comment like `This is an awesome comment 😄🔥` it will be saved as `This is an awesome comment :smile: :fire:`
+
+In your view where you display your comments you can use 
+
+```php
+@emojione($comment->content)
+```
+and that will convert `:smile:` and `😄` to the emojione equivalent. 
+
 
 ## Assets
 By default it will use the assets from JSDelivr.
