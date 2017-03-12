@@ -1,4 +1,4 @@
-# laravel-emojione 👍🏼
+# laravel-emojione <img alt="❤️" width="30" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
