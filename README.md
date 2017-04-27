@@ -4,10 +4,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Software License][ico-license]](LICENSE.md)
 
-<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7">
-<img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f3cb-1f3fc.svg?v=2.2.7">
-<img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
-<img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/262e.svg?v=2.2.7">
+<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7"> <img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f3cb-1f3fc.svg?v=2.2.7"> <img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7"> <img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/262e.svg?v=2.2.7">
 
 
 Laravel package to make it easier working with the gorgeous emojis from [EmojiOne](http://emojione.com/). 
@@ -19,7 +16,7 @@ Remember to read the [EmojiOne license](http://emojione.com/licensing/) and prov
 Via Composer
 
 ``` bash
-$ composer require christofferok/laravel-emojione
+$ composer require christofferok/laravel-emojione ^1.0
 ```
 
 Add the ServiceProvider to the providers array in `config/app.php`
