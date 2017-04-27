@@ -13,15 +13,11 @@ class LaravelEmojiOneServiceProvider extends ServiceProvider
         $this->publishes([__DIR__.'/../config/emojione.php' => config_path('emojione.php')], 'config');
 
         $this->publishes([
-            base_path('vendor/emojione/emojione/assets/png') => public_path('vendor/emojione/png'),
-            base_path('vendor/emojione/emojione/assets/css/emojione.min.css') => public_path('vendor/emojione/css/emojione.min.css'),
-            base_path('vendor/emojione/emojione/assets/svg') => public_path('vendor/emojione/svg'),
+            base_path('vendor/emojione/assets/png') => public_path('vendor/emojione/png'),
         ], 'public');
 
         $this->publishes([
-            base_path('vendor/emojione/emojione/assets/sprites/emojione.sprites.css') => public_path('vendor/emojione/sprites/emojione.sprites.css'),
-            base_path('vendor/emojione/emojione/assets/sprites/emojione.sprites.png') => public_path('vendor/emojione/sprites/emojione.sprites.png'),
-            base_path('vendor/emojione/emojione/assets/sprites/emojione.sprites.svg') => public_path('vendor/emojione/sprites/emojione.sprites.svg'),
+            base_path('vendor/emojione/assets/sprites') => public_path('vendor/emojione/sprites'),
         ], 'sprites');
 
         \Blade::directive('emojione', function ($expression) {

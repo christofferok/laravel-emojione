@@ -1,18 +1,18 @@
-# laravel-emojione <img alt="❤️" width="30" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
+# laravel-emojione <img alt="❤️" width="30" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/2764.png">
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Software License][ico-license]](LICENSE.md)
 
-<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7">
-<img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f3cb-1f3fc.svg?v=2.2.7">
-<img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
-<img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/svg/262e.svg?v=2.2.7">
+<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/1f600.png"> <img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/1f3cb-1f3fc.png"> <img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/2764.png"> <img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/262e.png">
 
 
-Laravel package to make it easier working with the gorgeous emojis from [EmojiOne](http://emojione.com/). 
+Laravel package to make it easier working with the gorgeous emojis from [EmojiOne](https://emojione.com/). 
 
-Remember to read the [EmojiOne license](http://emojione.com/licensing/) and provide the appropriate attribution.
+Remember to read the [EmojiOne Free License](https://www.emojione.com/developers/free-license) and provide the appropriate attribution. Or buy a  [premium license](https://www.emojione.com/developers/premium-license)
+
+## EmojiOne 3.0 vs 2.0
+EmojiOne made a lot of changes in their licensing and which resources are provided in the free license. v2 code is still available in the [emojione-v2](https://github.com/christofferok/laravel-emojione/tree/emojione-v2) branch. If you are upgrading this package, be aware that the SVG assets are not available anymore. 
 
 ## Install
 
@@ -41,7 +41,6 @@ $ php artisan vendor:publish --tag=config --provider="ChristofferOK\LaravelEmoji
 ```
 
 ## Usage
-For more details look at [https://github.com/Ranks/emojione](https://github.com/Ranks/emojione)
 
 ``` php
 LaravelEmojiOne::toShort($str); // - native unicode -> shortnames
@@ -52,16 +51,11 @@ LaravelEmojiOne::toImage($str); // - native unicode + shortnames -> images (mixe
 
 Blade (equivalent to `LaravelEmojiOne::toImage($str)`): 
 
-`@emojione(':smile:')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7">
+`@emojione(':smile:')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/64/1f600.png">
 
-`@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f600.svg?v=2.2.7"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg?v=2.2.7">
+`@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/1f600.png"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/2764.png">
 
-
-### Styling
-`<link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.7/assets/css/emojione.min.css"/>`
-
-or if you are serving your own CSS:
-`<link rel="stylesheet" href="/vendor/emojione/css/emojione.min.css"/>`
+More details at [https://github.com/Ranks/emojione/blob/master/examples/PHP.md](https://github.com/Ranks/emojione/blob/master/examples/PHP.md)
 
 ### Example
 You want to let users put emoji a comment. 
@@ -85,12 +79,24 @@ and that will convert `:smile:` and `😄` to the emojione equivalent.
 ## Assets
 By default it will use the assets from JSDelivr.
 
+Remember to run this before trying to publish any of the assets:
+
+```bash
+composer require emojione/assets
+```
+
 If you want to serve the assets yourself you can publish them with the following commands. Remember to update `config/emojione.php`
 
-PNG, SVG and CSS files:
+PNG files in sizes 32/64/128:
 
 ``` bash
 $ php artisan vendor:publish --tag=public --provider="ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider"
+```
+
+In `config/emojione.php` specify the local path. Remember to specify which size you want in the path (32/64/128). 
+
+```php
+'imagePathPNG' => '/vendor/emojione/png/64/',
 ```
 
 ### Sprites
@@ -99,13 +105,23 @@ If you want to use sprites:
 ``` bash
 $ php artisan vendor:publish --tag=sprites --provider="ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider"
 ```
-If using the PNG sprites you also have to use the following stylesheet:
-`<link rel="stylesheet" href="/vendor/emojione/sprites/emojione.sprites.css"/>`
+
+In `config/emojione.php` enable sprites:
+
+```php
+'sprites' => true,
+```
+
+Add the stylesheet to your HTML:
+
+```html
+<link rel="stylesheet" href="/vendor/emojione/sprites/emojione-sprite-32.min.css"/>
+```
 
 
 ## License
 
-Remember to read the [EmojiOne license](http://emojione.com/licensing/) and provide the appropriate attribution.
+Remember to read the [EmojiOne Free License](https://www.emojione.com/developers/free-license) and provide the appropriate attribution. Or buy a  [premium license](https://www.emojione.com/developers/premium-license)
 
 [ico-version]: https://img.shields.io/packagist/v/christofferok/laravel-emojione.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square

@@ -12,17 +12,17 @@ class LaravelEmojiOne
     public function __construct()
     {
         $this->client = new Client(new Ruleset());
-        $this->client->imageType = config('emojione.imageType');
+
+        $this->client->emojiSize = config('emojione.emojiSize');
+        $this->client->sprites = config('emojione.sprites');
+        $this->client->emojiVersion = config('emojione.emojiVersion');
+
         if (config('emojione.imagePathPNG')) {
             $this->client->imagePathPNG = config('emojione.imagePathPNG');
         }
-        if (config('emojione.imagePathSVG')) {
-            $this->client->imagePathSVG = config('emojione.imagePathSVG');
-        }
-
-        $this->client->sprites = config('emojione.sprites');
-        if (config('emojione.imagePathSVGSprites')) {
-            $this->client->imagePathSVGSprites = config('emojione.imagePathSVGSprites');
+        else{
+            // Use the CDN if 'imagePathPNG' config is not set
+            $this->client->imagePathPNG = 'https://cdn.jsdelivr.net/emojione/assets' . '/' . $this->client->emojiVersion . '/png/' . $this->client->emojiSize . '/';
         }
     }
 
@@ -44,5 +44,10 @@ class LaravelEmojiOne
     public function unicodeToImage($str)
     {
         return $this->client->unicodeToImage($str);
+    }
+
+    public function getClient()
+    {
+        return $this->client;
     }
 }

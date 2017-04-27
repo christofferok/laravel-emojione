@@ -1,8 +1,9 @@
 <?php
 return [
-    'imageType' => 'png', // png or svg
     'imagePathPNG' => null, // defaults to jsdelivr's free CDN
-    'imagePathSVG' => null, // defaults to jsdelivr's free CDN
     'sprites' => false, // use sprites?
-    'imagePathSVGSprites' => '/vendor/emojione/sprites/emojione.sprites.svg',
+
+    // If you are using the cdn, then you can change these values to get different sizes
+    'emojiSize' => 64, // 32/64/128
+    'emojiVersion' => '3.0',
 ];
