@@ -110,12 +110,13 @@ In `config/emojione.php` enable sprites:
 
 ```php
 'sprites' => true,
+'spriteSize' => 32, // 32 or 64
 ```
 
 Add the stylesheet to your HTML:
 
 ```html
-<link rel="stylesheet" href="/vendor/emojione/sprites/emojione-sprite-32.min.css"/>
+<link rel="stylesheet" href="/vendor/emojione/sprites/emojione-sprite-{{ config('emojione.spriteSize') }}.min.css"/>
 ```
 
 

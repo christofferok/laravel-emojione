@@ -15,6 +15,7 @@ class LaravelEmojiOne
 
         $this->client->emojiSize = config('emojione.emojiSize');
         $this->client->sprites = config('emojione.sprites');
+        $this->client->spriteSize = config('emojione.spriteSize');
         $this->client->emojiVersion = config('emojione.emojiVersion');
 
         if (config('emojione.imagePathPNG')) {
