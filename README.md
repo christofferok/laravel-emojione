@@ -1,17 +1,17 @@
-# laravel-emojione <img alt="❤️" width="30" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/2764.png">
+# laravel-emojione <img alt="❤️" width="30" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/2764.png">
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Software License][ico-license]](LICENSE.md)
 
-<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/1f600.png"> <img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/1f3cb-1f3fc.png"> <img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/2764.png"> <img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/262e.png">
+<img alt="😀" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/1f600.png"> <img alt="🏋🏼" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/1f3cb-1f3fc.png"> <img alt="❤️" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/2764.png"> <img alt="☮" width="50" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/262e.png">
 
 
 Laravel package to make it easier working with the gorgeous emojis from [EmojiOne](https://emojione.com/). 
 
 Remember to read the [EmojiOne Free License](https://www.emojione.com/developers/free-license) and provide the appropriate attribution. Or buy a  [premium license](https://www.emojione.com/developers/premium-license)
 
-## EmojiOne 3.0 vs 2.0
+## EmojiOne 3.x vs 2.0
 EmojiOne made a lot of changes in their licensing and which resources are provided in the free license. v2 code is still available in the [emojione-v2](https://github.com/christofferok/laravel-emojione/tree/emojione-v2) branch. If you are upgrading this package, be aware that the SVG assets are not available anymore. 
 
 ## Install
@@ -51,9 +51,9 @@ LaravelEmojiOne::toImage($str); // - native unicode + shortnames -> images (mixe
 
 Blade (equivalent to `LaravelEmojiOne::toImage($str)`): 
 
-`@emojione(':smile:')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/64/1f600.png">
+`@emojione(':smile:')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/64/1f600.png">
 
-`@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/1f600.png"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.0/png/128/2764.png">
+`@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/1f600.png"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/2764.png">
 
 More details at [https://github.com/Ranks/emojione/blob/master/examples/PHP.md](https://github.com/Ranks/emojione/blob/master/examples/PHP.md)
 
