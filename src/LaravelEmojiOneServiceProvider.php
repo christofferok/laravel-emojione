@@ -21,7 +21,7 @@ class LaravelEmojiOneServiceProvider extends ServiceProvider
         ], 'sprites');
 
         \Blade::directive('emojione', function ($expression) {
-            return "<?php echo resolve('".LaravelEmojiOne::class."')->toImage($expression); ?>";
+            return "<?php echo \App::make('".LaravelEmojiOne::class."')->toImage($expression); ?>";
         });
     }
 
