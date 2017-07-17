@@ -20,7 +20,7 @@ class LaravelEmojiOne
 
         if (config('emojione.imagePathPNG')) {
             if (strpos(config('emojione.imagePathPNG'), '//') === false) {
-                $this->client->imagePathPNG = url(config('emojione.imagePathPNG'));
+                $this->client->imagePathPNG = url(config('emojione.imagePathPNG')) . '/';
             } else {
                 $this->client->imagePathPNG = config('emojione.imagePathPNG');
             }
