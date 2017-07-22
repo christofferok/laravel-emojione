@@ -49,6 +49,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneServiceProvider"
+            ],
+            "alias": {
+                "LaravelEmojiOne": "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneFacade"
+            }
         }
     },
     "config": {
