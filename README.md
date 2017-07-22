@@ -21,6 +21,7 @@ Via Composer
 ``` bash
 $ composer require christofferok/laravel-emojione
 ```
+__If you are on Laravel 5.4 or lower you need to add the following to your `config/app.php` file:__
 
 Add the ServiceProvider to the providers array in `config/app.php`
 
@@ -28,7 +29,7 @@ Add the ServiceProvider to the providers array in `config/app.php`
 ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider::class,
 ```
 
-Add the ServiceProvider to the aliases array in `config/app.php`
+Add this to the aliases array in `config/app.php`
 
 ``` php
 'LaravelEmojiOne' => ChristofferOK\LaravelEmojiOne\LaravelEmojiOneFacade::class,
