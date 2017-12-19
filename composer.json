@@ -47,7 +47,7 @@
             "providers": [
                 "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneServiceProvider"
             ],
-            "alias": {
+            "aliases": {
                 "LaravelEmojiOne": "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneFacade"
             }
         }
