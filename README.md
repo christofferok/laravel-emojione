@@ -56,7 +56,9 @@ Blade (equivalent to `LaravelEmojiOne::toImage($str)`):
 
 `@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/1f600.png"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/128/2764.png">
 
-More details at [https://github.com/Ranks/emojione/blob/master/examples/PHP.md](https://github.com/Ranks/emojione/blob/master/examples/PHP.md)
+🚨 The output is not escaped so be careful with what you pass into `@emojione`.
+
+More details about how `toImage($str)` works can be found at [https://github.com/Ranks/emojione/blob/master/examples/PHP.md](https://github.com/Ranks/emojione/blob/master/examples/PHP.md)
 
 ### Example
 You want to let users put emoji a comment. 
