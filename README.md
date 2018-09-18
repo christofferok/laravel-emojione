@@ -25,6 +25,8 @@ If you are serving the assets yourself then you need to do the following things:
 ## EmojiOne 4.x/3.x vs 2.0
 EmojiOne made a lot of changes in their licensing and which resources are provided in the free license. v2 code is still available in the [emojione-v2](https://github.com/christofferok/laravel-emojione/tree/emojione-v2) branch. If you are upgrading this package, be aware that the SVG assets are not available anymore. 
 
+<br>
+
 ## Install
 
 Via Composer
@@ -34,16 +36,14 @@ $ composer require christofferok/laravel-emojione
 ```
 __If you are on Laravel 5.4 or lower you need to add the following to your `config/app.php` file:__
 
-Add the ServiceProvider to the providers array in `config/app.php`
 
-``` php
-ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider::class,
-```
-
-Add this to the aliases array in `config/app.php`
-
-``` php
-'LaravelEmojiOne' => ChristofferOK\LaravelEmojiOne\LaravelEmojiOneFacade::class,
+```php
+'providers' => [
+    ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider::class,
+]
+'aliases' => [
+    'LaravelEmojiOne' => ChristofferOK\LaravelEmojiOne\LaravelEmojiOneFacade::class,
+]
 ```
 
 Config:
@@ -51,6 +51,8 @@ Config:
 ``` bash
 $ php artisan vendor:publish --tag=config --provider="ChristofferOK\LaravelEmojiOne\LaravelEmojiOneServiceProvider"
 ```
+
+<br>
 
 ## Usage
 
@@ -71,7 +73,7 @@ Blade (equivalent to `LaravelEmojiOne::toImage($str)`):
 
 More details about how `toImage($str)` works can be found at [https://github.com/Ranks/emojione/blob/master/examples/PHP.md](https://github.com/Ranks/emojione/blob/master/examples/PHP.md)
 
-### Example
+### # Example
 You want to let users put emoji a comment. 
 When you are saving a comment, you might want to run the content through `LaravelEmojiOne::toShort($str)` to convert `😄` and other emoji to `:smile:` etc. 
 
@@ -89,6 +91,7 @@ In your view where you display your comments you can use
 ```
 and that will convert `:smile:` and `😄` to the emojione equivalent. 
 
+<br>
 
 ## Assets
 By default it will use the assets from JSDelivr.
@@ -133,6 +136,7 @@ Add the stylesheet to your HTML:
 <link rel="stylesheet" href="/vendor/emojione/sprites/emojione-sprite-{{ config('emojione.spriteSize') }}.min.css"/>
 ```
 
+<br>
 
 ## License
 
