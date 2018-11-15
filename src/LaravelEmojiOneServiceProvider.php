@@ -23,6 +23,10 @@ class LaravelEmojiOneServiceProvider extends ServiceProvider
         \Blade::directive('emojione', function ($expression) {
             return "<?php echo \App::make('".LaravelEmojiOne::class."')->toImage($expression); ?>";
         });
+        
+        \Blade::directive('emojioneTrans', function ($expression) {
+            return "<?php echo \App::make('".LaravelEmojiOne::class."')->toImage(__($expression)); ?>";
+        });
     }
 
     public function register()
