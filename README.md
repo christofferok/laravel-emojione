@@ -67,6 +67,10 @@ Blade (equivalent to `LaravelEmojiOne::toImage($str)`):
 
 `@emojione(':smile: ❤️')` -> <img alt="😀" width="20" src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/128/1f600.png"><img alt="❤️" width="20" src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/128/2764.png">
 
+You can also use this directive to put in translated content directly
+`@emojioneTrans('This is a translation string :heart:')` -> This is a translation string ❤️
+
+
 🚨 The output is not escaped so be careful with what you pass into `@emojione`.
 
 More details about how `toImage($str)` works can be found at [https://github.com/Ranks/emojione/blob/master/examples/PHP.md](https://github.com/Ranks/emojione/blob/master/examples/PHP.md)
