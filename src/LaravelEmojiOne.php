@@ -21,10 +21,14 @@ class LaravelEmojiOne
         if (config('emojione.imagePathPNG')) {
             $this->client->imagePathPNG = url(config('emojione.imagePathPNG')) . '/';
         }
-        else{
+        else {
             // Use the CDN if 'imagePathPNG' config is not set
             $this->client->imagePathPNG = 'https://cdn.jsdelivr.net/emojione/assets' . '/' . $this->client->emojiVersion . '/png/' . $this->client->emojiSize . '/';
         }
+        
+        // config ascii option added ternary incase option isn't part of config 
+        $this->client->ascii = config('emojione.ascii') ? true : false;
+        
     }
 
     public function toImage($str)
