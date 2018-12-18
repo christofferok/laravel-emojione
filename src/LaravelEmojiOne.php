@@ -27,7 +27,7 @@ class LaravelEmojiOne
         }
         
         // config ascii option added ternary incase option isn't part of config 
-        $this->client->ascii = config('emojione.ascii') ?? false;
+        $this->client->ascii = config('emojione.ascii') ? true : false;
         
     }
 
