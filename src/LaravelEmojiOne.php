@@ -76,10 +76,43 @@ class LaravelEmojiOne
     }
 
     /**
+     * @param $size
+     *
+     * @return \ChristofferOK\LaravelEmojiOne\LaravelEmojiOne
+     */
+    public function setEmojiSize($size)
+    {
+        $this->client->emojiSize = $size;
+
+        return $this;
+    }
+
+    /**
      * @return \Emojione\Client
      */
     public function getClient()
     {
         return $this->client;
+    }
+
+    /**
+     * @param $name
+     * @param $arguments
+     *
+     * @return mixed
+     * @throws \Exception
+     */
+    public function __call($name, $arguments)
+    {
+        $str = $arguments[0];
+        if (!is_string($str)) {
+            throw new \Exception('The argument should be a string');
+        }
+
+        if (!method_exists($this->client, $name)) {
+            throw new \Exception('Method ' . $name . ' is not exists');
+        }
+
+        return $this->client->{$name}($str);
     }
 }
