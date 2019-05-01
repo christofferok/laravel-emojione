@@ -106,11 +106,11 @@ class LaravelEmojiOne
     {
         $str = $arguments[0];
         if (!is_string($str)) {
-            throw new \Exception('The argument should be a string');
+            throw new \Exception('The argument must be a string');
         }
 
         if (!method_exists($this->client, $name)) {
-            throw new \Exception('Method ' . $name . ' is not exists');
+            throw new \Exception('Method ' . $name . ' does not exist');
         }
 
         return $this->client->{$name}($str);
