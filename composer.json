@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "~5.6|~7.0",
+        "php": ">=7.1",
         "emojione/emojione": "^4.0.0",
         "illuminate/support": "5.8.*|6.0.*"
     },
