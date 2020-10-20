@@ -85,10 +85,11 @@ So if someone leaves a comment like `This is an awesome comment 😄🔥` it wil
 In your view where you display your comments you can use 
 
 ```php
-@emojione($comment->content)
+@emojione($comment->content, 'toImage')
 ```
 and that will convert `:smile:` and `😄` to the emojione equivalent. 
 
+> You can use any emojione method you wish as second argument, checkout more [joypixels/emojione](https://github.com/joypixels/emojione/blob/master/lib/php/src/Client.php)
 
 ## Assets
 By default it will use the assets from JSDelivr.
