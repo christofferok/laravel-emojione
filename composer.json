@@ -22,14 +22,14 @@
     "require": {
         "php": "~5.6|~7.0|~8.0",
         "emojione/emojione": "^4.0.0",
-        "illuminate/support": "~5.1|~6.0|~7.0|~8.0|~9.0"
+        "illuminate/support": "~5.1|~6.0|~7.0|~8.0|~9.0|^10.0"
     },
     "suggest": {
         "emojione/assets": "If you want to serve the emojione assets yourself"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0|~5.0",
-        "squizlabs/php_codesniffer": "^2.3"
+        "phpunit/phpunit": "~4.0|~5.0|^9.5.10",
+        "squizlabs/php_codesniffer": "^2.3|^3.7"
     },
     "autoload": {
         "psr-4": {
@@ -41,7 +41,7 @@
             "ChristofferOK\\LaravelEmojiOne\\": "tests"
         }
     },
-    "scripts": {},
+    "scripts": [],
     "extra": {
         "laravel": {
             "providers": [
